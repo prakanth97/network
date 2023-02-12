@@ -40,7 +40,11 @@ public class UnDiGraph {
         return self.graphtb.hasKey(v.toString());
     }
 
-    public function addEdge(Vertex u, Vertex v, int weight = 0) {
+    public function getNodes() returns string[] {
+        return self.graphtb.keys();
+    }
+
+    public function addEdge(Vertex u, Vertex v, int weight = 1) {
         string vertexU = u.toString();
         string vertexV = v.toString();
 
@@ -173,7 +177,13 @@ public class UnDiGraph {
         return self.graphtb.get(vertexU).edges.keys();
     }
 
-    public function toDirectedGraph() {
+    public function neighbours(Vertex u) returns map<int>|error {
+        string vertexU = u.toString();
 
+        if !self.graphtb.hasKey(vertexU) {
+            return error(string `${vertexU} not found`);
+        }
+
+        return self.graphtb.get(vertexU).edges;
     }
 }

@@ -25,7 +25,9 @@ public type Graph object {
 
     public function hasNode(Vertex v) returns boolean;
 
-    public function addEdge(Vertex u, Vertex v, int weight = 0);
+    public function getNodes() returns string[];
+
+    public function addEdge(Vertex u, Vertex v, int weight = 1);
 
     public function removeEdge(Vertex u, Vertex v) returns boolean;
 
@@ -46,4 +48,6 @@ public type Graph object {
     public function numberOfEdges(Vertex? u = null, Vertex? v = null) returns int;
 
     public function successor(Vertex u) returns string[]|error;
+
+    public function neighbours(Vertex u) returns map<int>|error;
 };
