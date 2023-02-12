@@ -7,6 +7,11 @@ public type Node record {|
     map<int> edges = {};
 |};
 
+public type Queue record {|
+    string vertex;
+    string[] path;
+|}[];
+
 public type Graph object {
     public function getGraphTable() returns GraphTb;
 
