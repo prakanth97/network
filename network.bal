@@ -162,5 +162,5 @@ public function getLongestPath(Graph graph, Vertex 'source, Vertex destination) 
 }
 
 // TODO: Bellman-Ford Algorithm to handle negative weight and cycles,
-// A* algorithm to optimize shortest path algorithm, 
+// A* algorithm to optimize shortest path algorithm with positive weight, 
 // shortest distance from single source to all vetices.
