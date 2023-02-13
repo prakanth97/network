@@ -149,7 +149,7 @@ function getAllThePathUntil(Graph graph, string 'source, string destination,
     isVisited['source] = false;
 }
 
-public function getLongestPath(Graph graph, Vertex 'source, Vertex destination) returns string[] {
+public function longestPath(Graph graph, Vertex 'source, Vertex destination) returns string[] {
     string[][] allThePaths = getAllThePaths(graph, 'source, destination);
 
     string[] longestPath = [];
