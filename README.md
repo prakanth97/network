@@ -4,6 +4,8 @@ The `network` library created for Ballerina offers a range of capabilities for r
 
 ## Simple example
 
+Directed graph
+
 ```
 import ballerina/io;
 
@@ -22,9 +24,27 @@ public function main() {
     graph.addEdge(9, 4, 6);
 
     // considering the weight
-    io:println(shortestPath(graph, "1", "4", true));
+    io:println(shortestPath(graph, 1, 4, true));
 
     // without considering the weight
-    io:println(shortestPath(graph, "1", "4"));
+    io:println(shortestPath(graph, 1, 4));
+}
+```
+
+Undirected graph
+
+```
+import ballerina/io;
+
+public function main() {
+    Graph graph = new UnDiGraph();
+    graph.addEdge(1, 2, 2);
+    graph.addEdge(3, 2, 2);
+    graph.addEdge(3, 4, 2);
+    graph.addEdge(5, 1, 1);
+    graph.addEdge(5, 4, 2);
+
+    // considering the weight
+    io:println(shortestPath(graph, 1, 4, true));
 }
 ```
