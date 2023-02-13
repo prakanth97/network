@@ -1,6 +1,6 @@
 # Network
 
-The `network` library created for Ballerina offers a range of capabilities for representing and manipulating graph structures within the Ballerina environment. With this library, users can create a graph, add vertices and edges, search for paths between vertices, determine the shortest distance between two vertices, and perform other related operations.
+The `network` library created for Ballerina offers a range of capabilities for representing and manipulating graph structures. With this library, users can create a graph, add vertices and edges, search for paths between vertices, determine the shortest distance between two vertices, and perform other related operations.
 
 ## Simple example
 
